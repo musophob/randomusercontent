@@ -16,7 +16,13 @@ puts comment
 # test check if the string is a working youtube video
 
 
+begin # fail test
+  url = Nokogiri::XML(open("https://gdata.youtube.com/feeds/api/videos/T-4FvTDo5pg/comments"))
+rescue OpenURI::HTTPError
+  puts "#{url} is not a valid youtube video."
+end
 
+# see http://blog.jerodsanto.net/2008/08/ruby-to-the-rescue/
 
 # 
 # hit gdata.youtube.com with request for xml
