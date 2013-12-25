@@ -2,7 +2,7 @@ require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
 
-class Rytc
+class Ryc
   def self.go
     begin
       # get randomyoutubecomment.com
