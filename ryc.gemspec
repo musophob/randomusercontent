@@ -8,6 +8,6 @@ Gem::Specification.new do |s|
   s.email       = 'mail@sean.sh'
   s.files       = ["lib/ryc.rb"]
   s.homepage    =
-    'http://rubygems.org/gems/rytc'
+    'https://github.com/thetateal/randomusercontent'
   s.license       = 'nil'
 end
