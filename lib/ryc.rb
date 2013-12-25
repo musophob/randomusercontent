@@ -3,32 +3,41 @@ require 'nokogiri'
 require 'open-uri'
 
 class Ryc
-  def self.go
+
+  def self.comment
     begin
-      # get randomyoutubecomment.com
       page = Nokogiri::HTML(open("http://www.randomyoutubecomment.com/"))
-
-      # get the comment
-      comment = page.css("div a p")[0].text
-      # @ filter out strange characters
-
-      # get the author
-      author = page.css("div a + p")[0].text
-
-      # get the video url
-      vidurl = page.css("div p:nth-child(4) a")[0]["href"]
-    
-      # output the comment
-      puts comment
-      puts author
-      puts vidurl
-
+      thecomment = page.css("div a p")[0].text
+      puts thecomment
     rescue OpenURI::HTTPError
-
       puts "Couldn't get the page - OpenURL::HTTPError"
       puts "Trying again..."
       retry
-
     end
   end
+
+  def self.author
+    begin
+      page = Nokogiri::HTML(open("http://www.randomyoutubecomment.com/"))
+      theauthor = page.css("div a + p")[0].text
+      puts theauthor
+    rescue OpenURI::HTTPError
+      puts "Couldn't get the page - OpenURL::HTTPError"
+      puts "Trying again..."
+      retry
+    end
+  end
+
+  def self.vidurl
+    begin
+      page = Nokogiri::HTML(open("http://www.randomyoutubecomment.com/"))
+      thevidurl = page.css("div p:nth-child(4) a")[0]["href"]
+      puts thevidurl
+    rescue OpenURI::HTTPError
+      puts "Couldn't get the page - OpenURL::HTTPError"
+      puts "Trying again..."
+      retry
+    end
+  end
+
 end
