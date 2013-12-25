@@ -16,11 +16,11 @@ class Ryc
     end
   end
 
-  def self.author
+  def self.user
     begin
       page = Nokogiri::HTML(open("http://www.randomyoutubecomment.com/"))
-      theauthor = page.css("div a + p")[0].text
-      puts theauthor
+      theuser = page.css("div a + p")[0].text
+      puts theuser
     rescue OpenURI::HTTPError
       puts "Couldn't get the page - OpenURL::HTTPError"
       puts "Trying again..."
