@@ -3,33 +3,28 @@
 Generates random user content in your applications. Great for prototyping!
 
 
-## About ##
+## Huh? ##
 
 Currently ryc can puts a comment, author or URL from a random youtube video. Each time its called the content will be different. More services and content types might be available in the future. 
 
 
-## Installation ##
+## Buy It ##
 
     gem install ryc
 
 
-## Usage ##
+## Do It ##
 
 With the gem installed, call `Ryc.method` anywhere and watch the magic ensue. 
 
 Currently available methods:
 
     Ryc.comment
-    Ryc.author
+    Ryc.username
     Ryc.url
 
 
-## Platform Support ##
-
-It works on `ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]`. The end.
-
-
-## To-do's ##
+## Upgrade It ##
 
 * Add more platforms as content sources (twitter, facebook, ...)
 * Add a method that outputs a hash of all content types from the same source page instead of picking a random source for each type.
@@ -39,9 +34,14 @@ It works on `ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin
     * `(rating(pg|pg13|r|nc17)` to choose the level of profanity that best suites your needs. Pass `nc17 ` to `puts` raw unfiltered content. 
 
 
-## Issue submission ##
+## Fix It ##
 
 Gladly accepted in the form of pull requests :)
+
+
+## Platform Support ##
+
+It works on `ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]`. The end.
 
 
 ## Credits ##
