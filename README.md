@@ -24,6 +24,11 @@ Currently available methods:
     Ryc.url
 
 
+## Platform Support ##
+
+It works on `ruby 2.0.0p247 (2013-06-27 revision 41674) [universal.x86_64-darwin13]`. The end.
+
+
 ## To-do's ##
 
 * Add more platforms as content sources (twitter, facebook, ...)
