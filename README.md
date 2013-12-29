@@ -15,13 +15,14 @@ Currently ryc can puts a comment, author or URL from a random youtube video. Eac
 
 ## Do It ##
 
-With the gem installed, call `Ryc.method` anywhere and watch the magic ensue. 
+    require 'ryc'
+    Ryc::Generate.comment
 
 Currently available methods:
 
-    Ryc.comment
-    Ryc.username
-    Ryc.url
+    Generate.comment
+    Generate.username
+    Generate.url
 
 
 ## Upgrade It ##
